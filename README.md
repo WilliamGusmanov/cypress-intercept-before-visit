@@ -1,6 +1,6 @@
 # eslint-plugin-cypress-intercept-before-visit-check
 
-checks that intercepts occur before a visit
+Custom eslint rule that checks that intercepts occur before a visit
 
 ## Installation
 
