@@ -59,7 +59,21 @@ ruleTester.run("cypress-intercept-before-visit", rule, {
       });
     `,
     parserOptions
-  }
+  },
+  {
+    code: `
+      describe(() => {
+        beforeEach(() => {
+          cy.intercept('test').as('someAlias');
+        });
+        it('', () => {
+          cy.visit('test');
+        });
+      });
+    `,
+    errors: [{ messageId: 'unexpected' }],
+    parserOptions
+  },
   ],
 
   invalid: [
@@ -67,6 +81,32 @@ ruleTester.run("cypress-intercept-before-visit", rule, {
       code: `
         describe(() => {
           it('', () => {
+            cy.visit('test');
+            cy.intercept('test').as('someAlias');
+          });
+        });
+      `,
+      errors: [{ messageId: 'unexpected' }],
+      parserOptions
+    },
+    {
+      code: `
+        describe(() => {
+          beforeEach(() => {
+            cy.visit('test');
+          });
+          it('', () => {
+            cy.intercept('test').as('someAlias');
+          });
+        });
+      `,
+      errors: [{ messageId: 'unexpected' }],
+      parserOptions
+    },
+    {
+      code: `
+        describe(() => {
+          it('', { someConfig: true }, () => {
             cy.visit('test');
             cy.intercept('test').as('someAlias');
           });
