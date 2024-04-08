@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-cypress-intercept-before-visit-check",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "checks that intercepts occur before a visit",
   "keywords": [
     "eslint",
