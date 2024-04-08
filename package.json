@@ -36,5 +36,9 @@
   "peerDependencies": {
     "eslint": ">=7"
   },
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/WilliamGusmanov/cypress-intercept-before-visit.git"
+  }
 }
