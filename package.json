@@ -1,7 +1,7 @@
 {
-  "name": "eslint-plugin-cypress-intercept-before-visit-check",
-  "version": "0.0.10",
-  "description": "checks that intercepts occur before a visit",
+  "name": "eslint-plugin-no-visit-before-intercepts",
+  "version": "0.1.0",
+  "description": "eslint rule for detecting cypress intercepts after visits",
   "keywords": [
     "eslint",
     "eslintplugin",
@@ -39,6 +39,6 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "https://github.com/WilliamGusmanov/cypress-intercept-before-visit.git"
+    "url": "https://github.com/WilliamGusmanov/eslint-plugin-no-visit-before-intercepts.git"
   }
 }

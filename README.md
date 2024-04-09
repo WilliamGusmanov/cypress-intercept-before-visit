@@ -1,4 +1,4 @@
-# eslint-plugin-cypress-intercept-before-visit-check
+# eslint-plugin-no-visit-before-intercepts
 
 Custom eslint rule that checks that no intercepts occur after a visit
 
@@ -10,20 +10,20 @@ You'll first need to install [ESLint](https://eslint.org/):
 npm i eslint --save-dev
 ```
 
-Next, install `eslint-plugin-cypress-intercept-before-visit-check`:
+Next, install `eslint-plugin-no-visit-before-intercepts`:
 
 ```sh
-npm install eslint-plugin-cypress-intercept-before-visit-check --save-dev
+npm install eslint-plugin-no-visit-before-intercepts --save-dev
 ```
 
 ## Usage
 
-Add `cypress-intercept-before-visit-check` to the plugins section of your `.eslintrc` configuration file. You can omit the `eslint-plugin-` prefix:
+Add `no-visit-before-intercepts` to the plugins section of your `.eslintrc` configuration file. You can omit the `eslint-plugin-` prefix:
 
 ```json
 {
     "plugins": [
-        "cypress-intercept-before-visit-check"
+        "no-visit-before-intercepts"
     ]
 }
 ```
@@ -34,7 +34,7 @@ Then configure the rules you want to use under the rules section.
 ```json
 {
     "rules": {
-        "cypress-intercept-before-visit-check/cypress-intercept-before-visit": 2
+        "no-visit-before-intercepts/no-visit-before-intercepts": 2
     }
 }
 ```
