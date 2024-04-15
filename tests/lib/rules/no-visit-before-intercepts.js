@@ -7,7 +7,7 @@
 // Requirements
 //------------------------------------------------------------------------------
 
-const rule = require("../../../lib/rules/cypress-intercept-before-visit"),
+const rule = require("../../../lib/rules/no-visit-before-intercepts"),
   RuleTester = require("eslint").RuleTester;
 
 const parserOptions = { ecmaVersion: 6 }
@@ -76,7 +76,7 @@ ruleTester.run("cypress-intercept-before-visit", rule, {
   },
   ],
 
-  invalid: [
+  invalid: [ 
     {
       code: `
         describe(() => {
