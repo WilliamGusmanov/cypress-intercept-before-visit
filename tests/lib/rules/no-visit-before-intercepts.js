@@ -46,6 +46,26 @@ ruleTester.run("cypress-intercept-before-visit", rule, {
     code: `
       describe(() => {
         context(() => {
+          beforeEach(() => {
+            cy.visit('test');
+          })
+          it('', () => {
+            // something
+          });
+        });
+        context(() => {
+          it('', () => {
+            cy.intercept('test');
+          });
+        })
+      });
+    `,
+    parserOptions
+  },
+  {
+    code: `
+      describe(() => {
+        context(() => {
           it('', () => {
             cy.intercept('test');
             cy.visit('test');
