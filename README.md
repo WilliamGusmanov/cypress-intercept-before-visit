@@ -2,6 +2,10 @@
 
 Custom eslint rule that checks that no intercepts occur after a visit
 
+
+Limitations: 
+Currently does not handle linting cypress code defined in functions.
+
 ## Installation
 
 You'll first need to install [ESLint](https://eslint.org/):
