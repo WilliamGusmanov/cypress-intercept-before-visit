@@ -31,6 +31,18 @@ ruleTester.run("cypress-intercept-before-visit", rule, {
   },
   {
     code: `
+      describe.skip('settings', () => {
+        beforeEach(() => cy.visit('/'));
+
+        it('should have a passing test', () => {
+          expect(true).to.equal(true);
+        });
+      })
+    `,
+    parserOptions
+  },
+  {
+    code: `
       describe(() => {
         context(() => {
           it('', () => {
