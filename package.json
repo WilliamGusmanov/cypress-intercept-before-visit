@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-no-visit-before-intercepts",
-  "version": "0.2.0",
+  "version": "0.4.0",
   "description": "eslint rule for detecting cypress intercepts after visits",
   "keywords": [
     "eslint",
